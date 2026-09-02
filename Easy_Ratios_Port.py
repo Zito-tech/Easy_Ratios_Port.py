@@ -1,11 +1,12 @@
 import streamlit as st
 
-      def show_ratios_dashboard():
 
-      st.subheader("📊 Painel de Análise de Rácios")
+def show_ratios_dashboard():
 
-      # Dicionário com TODOS os rácios
-      ratios = {
+    st.subheader("📊 Painel de Análise de Rácios")
+
+    # Dicionário com TODOS os rácios
+    ratios = {
         "Rácio de Crescimento do Volume de Negócios": {
             "formula": "(Volume de Negócios do Ano Atual - Volume de Negócios do Ano Anterior) / Volume de Negócios do Ano Anterior × 100",
             "description": "Determina o crescimento do volume de vendas. Crescimento rápido pode causar problemas de fluxo de caixa."
@@ -61,6 +62,7 @@ import streamlit as st
 
     with col1:
         st.subheader("📌 Rácios")
+
         selected_ratio = st.radio(
             "Selecione um Rácio",
             list(ratios.keys())
@@ -68,11 +70,15 @@ import streamlit as st
 
     with col2:
         st.subheader("📖 Detalhes")
+
         st.markdown(f"### {selected_ratio}")
+
         st.write("**Fórmula:**")
         st.info(ratios[selected_ratio]["formula"])
+
         st.write("**O que este rácio nos indica:**")
         st.success(ratios[selected_ratio]["description"])
+
 
 if __name__ == "__main__":
     show_ratios_dashboard()
