@@ -1,6 +1,6 @@
 import streamlit as st
 
-    def show_ratios_dashboard():
+      def show_ratios_dashboard():
 
       st.subheader("📊 Painel de Análise de Rácios")
 
